@@ -457,13 +457,7 @@ public class CameraView extends ViewGroup implements AutoFocusCallback {
   public void stopFaceDetection() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH
         && camera != null && isDetectingFaces) {
-      try {
-        camera.stopFaceDetection();
-      }
-      catch (Exception e) {
-        // TODO get this out to hosting app
-      }
-
+      camera.stopFaceDetection();
       isDetectingFaces=false;
     }
   }
